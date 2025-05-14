@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.profservice.controller.MovementController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <HBox spacing="10.0">
+        <TextField fx:id="searchField" promptText="Поиск..." />
+        <Button text="Найти" onAction="#handleSearch" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="Добавить" onAction="#handleAddMovement" />
+        <Button text="Редактировать" onAction="#handleEditMovement" />
+        <Button text="Удалить" onAction="#handleDeleteMovement" />
+    </HBox>
+    <TableView fx:id="movementTable">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="employeeColumn" text="Сотрудник" />
+            <TableColumn fx:id="typeColumn" text="Тип перемещения" />
+            <TableColumn fx:id="dateColumn" text="Дата" />
+            <TableColumn fx:id="newDepartmentColumn" text="Новый отдел" />
+            <TableColumn fx:id="newPositionColumn" text="Новая должность" />
+        </columns>
+    </TableView>
+</VBox>

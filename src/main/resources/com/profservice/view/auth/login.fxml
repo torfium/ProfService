@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="294.0" prefWidth="189.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.profservice.controller.AuthController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label prefHeight="49.0" prefWidth="105.0" style="-fx-font-weight: bold;" text="ПРОФ-СЕРВИC&#13;HRM Система" textAlignment="CENTER">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+    <VBox alignment="CENTER_LEFT" spacing="10.0">
+        <Label text="Имя пользователя" />
+        <TextField fx:id="usernameField" text="test" promptText="Введите имя пользователя" />
+        <Label text="Пароль" />
+        <PasswordField fx:id="passwordField" promptText="Введите пароль" />
+    </VBox>
+    <Button defaultButton="true" onAction="#handleLogin" text="Войти" />
+</VBox>

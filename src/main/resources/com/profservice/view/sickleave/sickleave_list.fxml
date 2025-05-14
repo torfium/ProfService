@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.profservice.controller.SickLeaveController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <HBox spacing="10.0">
+        <TextField fx:id="searchField" promptText="Поиск..." />
+        <Button text="Найти" onAction="#handleSearch" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="Добавить" onAction="#handleAddSickLeave" />
+        <Button text="Редактировать" onAction="#handleEditSickLeave" />
+        <Button text="Удалить" onAction="#handleDeleteSickLeave" />
+    </HBox>
+    <TableView fx:id="sickLeaveTable">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="employeeColumn" text="Сотрудник" />
+            <TableColumn fx:id="startDateColumn" text="Начало" />
+            <TableColumn fx:id="endDateColumn" text="Конец" />
+            <TableColumn fx:id="diagnosisColumn" text="Диагноз" />
+            <TableColumn fx:id="paymentPercentageColumn" text="Процент оплаты" />
+            <TableColumn fx:id="statusColumn" text="Статус" />
+        </columns>
+    </TableView>
+</VBox>

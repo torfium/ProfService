@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.profservice.controller.EmployeeController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <HBox spacing="10.0">
+        <TextField fx:id="searchField" promptText="Поиск..." />
+        <Button text="Найти" onAction="#handleSearch" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="Добавить" onAction="#handleAddEmployee" />
+        <Button text="Редактировать" onAction="#handleEditEmployee" />
+        <Button text="Удалить" onAction="#handleDeleteEmployee" />
+    </HBox>
+    <TableView fx:id="employeeTable">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="lastNameColumn" text="Фамилия" />
+            <TableColumn fx:id="firstNameColumn" text="Имя" />
+            <TableColumn fx:id="middleNameColumn" text="Отчество" />
+            <TableColumn fx:id="birthDateColumn" text="Дата рождения" />
+            <TableColumn fx:id="genderColumn" text="Пол" />
+            <TableColumn fx:id="passportSeriesColumn" text="Серия паспорта" />
+            <TableColumn fx:id="passportNumberColumn" text="Номер паспорта" />
+            <TableColumn fx:id="addressColumn" text="Адрес" />
+            <TableColumn fx:id="phoneColumn" text="Телефон" />
+            <TableColumn fx:id="emailColumn" text="Email" />
+            <TableColumn fx:id="hireDateColumn" text="Дата приема" />
+            <TableColumn fx:id="dismissalDateColumn" text="Дата увольнения" />
+            <TableColumn fx:id="positionColumn" text="Должность" />
+            <TableColumn fx:id="departmentColumn" text="Отдел" />
+            <TableColumn fx:id="statusColumn" text="Статус" />
+        </columns>
+    </TableView>
+</VBox>

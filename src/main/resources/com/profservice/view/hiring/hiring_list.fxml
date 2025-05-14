@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.profservice.controller.HiringController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <HBox spacing="10.0">
+        <TextField fx:id="searchField" promptText="Поиск..." />
+        <Button text="Найти" onAction="#handleSearch" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="Добавить" onAction="#handleAddHiring" />
+        <Button text="Редактировать" onAction="#handleEditHiring" />
+        <Button text="Удалить" onAction="#handleDeleteHiring" />
+    </HBox>
+    <TableView fx:id="hiringTable">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="employeeColumn" text="Сотрудник" />
+            <TableColumn fx:id="hireDateColumn" text="Дата приема" />
+            <TableColumn fx:id="contractColumn" text="Номер договора" />
+            <TableColumn fx:id="salaryColumn" text="Зарплата" />
+            <TableColumn fx:id="hrManagerColumn" text="HR менеджер" />
+        </columns>
+    </TableView>
+</VBox>
